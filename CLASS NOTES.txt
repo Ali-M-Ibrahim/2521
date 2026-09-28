@@ -1,0 +1,21 @@
+What is Laravel?
+Laravel php framework based on MVC Architecture.
+MVC Architecture is a logical architecture that separate the application logically into 3 components:
+M stands for Model ==> to communication with database and hold data
+V stands for views ==> user interface
+C stands for controllers ==> handle incoming request and handle response 
+
+
+Laravel 2 keywords:
+
+COMPOSER: DEPENDENCY MANAGER FOR PHP 
+
+ARTISAN: COMMAND LINE INTERFACE 
+
+To create a laravel project we execute:
+
+composer create-project laravel/laravel APPName
+
+To run our application we execute:
+
+php artisan serve
