@@ -19,3 +19,36 @@ composer create-project laravel/laravel APPName
 To run our application we execute:
 
 php artisan serve
+
+---
+upon cloning laravel project
+step 1: execute " composer install "  to create vendor folder
+step 2: copy .env.example and name it .env
+
+
+
+To check list of routes:
+
+php artisan route:list
+
+
+to create a  plain controller
+
+php artisane make:controller controllerName
+this command will create a controller under app/http
+
+
+to create a resource controller:
+php artisan make:controller controllerName --resource
+
+
+to create a api contollre
+
+php artisan make:controller controllerName --api
+
+
+
+to create a invokable contoller
+
+php artisan make:controller controllerName --invokable
+--> controller with only 1 function
