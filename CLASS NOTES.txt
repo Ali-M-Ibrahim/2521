@@ -52,3 +52,22 @@ to create a invokable contoller
 
 php artisan make:controller controllerName --invokable
 --> controller with only 1 function
+
+
+--------
+
+1) To create a model, execute:
+php artisan make:model modelName -m
+
+
+2) To execute the existing migrations;
+php artisan migrate
+
+3) To drop all existing tables:
+php artisan migrate:reset
+
+4) top drop all tables then recreate them:
+php artisan migrate:refresh or :fresh
+
+5) to add fields to an exisitng table , you can simply create a migration for it using:
+php artisan make:migration namemigration --table=TableNameToBeModified

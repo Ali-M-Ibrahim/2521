@@ -1,10 +1,12 @@
 <?php
 
 use App\Http\Controllers\FirstController;
+use App\Http\Controllers\InvokeController;
+use App\Models\Customer;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\InvokeController;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -136,3 +138,14 @@ Route::get('first-controller-3', [
     'uses' => 'App\Http\Controllers\FirstController@index',
     'as' => 'first-controller-3',
 ]);
+
+Route::get('test-relations', function () {
+    // select * from tableName where id=?;
+    // ModelName::find($id);
+    // select * from customers where id=1;
+    $customer = Customer::find(1);
+    $crendetials = $customer->getCredentials;
+    $accounts = $customer->getAccounts;
+
+    return $accounts;
+});
