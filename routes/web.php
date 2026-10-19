@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DataController;
 use App\Http\Controllers\FirstController;
 use App\Http\Controllers\InvokeController;
 use App\Models\Customer;
@@ -149,3 +150,23 @@ Route::get('test-relations', function () {
 
     return $accounts;
 });
+
+Route::get('getAll', [DataController::class, 'getAll']);
+Route::get('getById/{id}', [DataController::class, 'getById']);
+Route::get('getByCondition', [DataController::class, 'getByCondition']);
+Route::get('getByMultipleConditions', [DataController::class, 'getByMultipleConditions']);
+Route::get('getUsingLike', [DataController::class, 'getUsingLike']);
+Route::get('getConditionOr', [DataController::class, 'getConditionOr']);
+Route::get('getIn', [DataController::class, 'getIn']);
+Route::get('getNotIn', [DataController::class, 'getNotIn']);
+Route::get('getBetween', [DataController::class, 'getBetween']);
+Route::get('getSpecificAttributes', [DataController::class, 'getSpecificAttributes']);
+
+Route::get('getDistinct', [DataController::class, 'getDistinct']);
+Route::get('ordering', [DataController::class, 'ordering']);
+Route::get('Arithmetic', [DataController::class, 'Arithmetic']);
+Route::get('getPluck', [DataController::class, 'getPluck']);
+Route::get('getLatst', [DataController::class, 'getLatst']);
+Route::get('groupBy', [DataController::class, 'groupBy']);
+Route::get('join', [DataController::class, 'join']);
+Route::get('relation', [DataController::class, 'relation']);
