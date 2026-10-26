@@ -3,6 +3,7 @@
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\FirstController;
 use App\Http\Controllers\InvokeController;
+use App\Http\Controllers\ProductController;
 use App\Models\Customer;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -170,3 +171,6 @@ Route::get('getLatst', [DataController::class, 'getLatst']);
 Route::get('groupBy', [DataController::class, 'groupBy']);
 Route::get('join', [DataController::class, 'join']);
 Route::get('relation', [DataController::class, 'relation']);
+
+Route::get('create1', [ProductController::class, 'create1']);
+Route::get('create2', [ProductController::class, 'create2']);
