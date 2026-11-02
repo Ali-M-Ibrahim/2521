@@ -4,6 +4,8 @@ use App\Http\Controllers\DataController;
 use App\Http\Controllers\FirstController;
 use App\Http\Controllers\InvokeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ViewController;
+
 use App\Models\Customer;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -174,3 +176,14 @@ Route::get('relation', [DataController::class, 'relation']);
 
 Route::get('create1', [ProductController::class, 'create1']);
 Route::get('create2', [ProductController::class, 'create2']);
+
+
+
+Route::get('page1',[ViewController::class,'page1']);
+Route::get('page2',[ViewController::class,'page2']);
+Route::get('listProduct',[ViewController::class,'listProduct'])->name('list-product');
+Route::get('addProduct',[ViewController::class,'addProduct'])->name('add-product');
+Route::post('saveProduct',[ViewController::class,'saveProduct'])->name('save-product');
+
+
+

@@ -1,0 +1,183 @@
+/* 1. Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+}
+
+/* 2. Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a2e;
+    padding: 15px 30px;
+    position: sticky; /* Keeps navbar at the top while scrolling */
+    top: 0;
+    z-index: 1000;
+}
+
+/* 3. Logo Styling */
+.logo {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* 4. Navigation Links Container */
+.nav-links {
+    list-style: none; /* Removes default bullet points */
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+/* 5. Individual Link Styling */
+.nav-links a {
+    color: #e0e0e0;
+    text-decoration: none; /* Removes underline */
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease; /* Smooth hover effect transition */
+}
+
+/* 6. Hover & Active States */
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ffffff;
+    background-color: #0f3460;
+}
+
+/* 7. Responsive Breakpoint (Mobile View) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+    }
+}
+/* 1. Reset and Sticky Footer Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Pushes the footer down if content is short */
+.content-wrapper {
+    flex: 1;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* 2. Footer Base Styles */
+.site-footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 40px 20px 20px 20px;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* 3. Footer Columns */
+.footer-column {
+    flex: 1;
+    min-width: 250px; /* Forces wrapping on smaller screens */
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #45a1ff; /* Accent color */
+}
+
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #b3b3b3;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for Links */
+.footer-column ul li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* 4. Footer Bottom Bar */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 30px auto 0 auto;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    text-align: center;
+    font-size: 13px;
+    color: #888;
+}
+
+/* 5. Mobile Responsiveness */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .footer-column {
+        min-width: 100%;
+    }
+}
