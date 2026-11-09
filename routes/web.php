@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\FirstController;
 use App\Http\Controllers\InvokeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ViewController;
+use App\Http\Controllers\ItemController;
 
 use App\Models\Customer;
 use Illuminate\Http\Request;
@@ -187,3 +189,14 @@ Route::post('saveProduct',[ViewController::class,'saveProduct'])->name('save-pro
 
 
 
+Route::get('list-category',[CategoryController::class,'list'])->name('list-category');
+Route::get('add-category',[CategoryController::class,'create'])->name('add-category');
+Route::post('save-category',[CategoryController::class,'store'])->name('save-category');
+Route::get('show-category/{id}',[CategoryController::class,'show'])->name('show-category');
+Route::delete('delete-category/{id}',[CategoryController::class,'delete'])->name('delete-category');
+Route::get('delete-category/{id}',[CategoryController::class,'delete'])->name('delete-category2');
+Route::get('edit-category/{id}',[CategoryController::class,'edit'])->name('edit-category');
+Route::put('update-category/{id}',[CategoryController::class,'update'])->name('update-category');
+
+
+Route::resource('item',ItemController::class);
