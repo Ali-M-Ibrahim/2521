@@ -20,3 +20,10 @@ Route::get('massUpdate', [ProductController::class, 'massUpdate']);
 Route::delete('delete/{id}', [ProductController::class, 'delete']);
 Route::delete('massDelete', [ProductController::class, 'massDelete']);
 
+Route::get('mobile-data', function () {
+    return response()->json([
+        'title' => 'data from backend',
+        'description' => 'this is my first rest api from react native to backend larabvel',
+        'movies' => [],
+    ]);
+});

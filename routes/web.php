@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DataController;
+use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\FirstController;
 use App\Http\Controllers\InvokeController;
 use App\Http\Controllers\ProductController;
@@ -200,3 +201,7 @@ Route::put('update-category/{id}',[CategoryController::class,'update'])->name('u
 
 
 Route::resource('item',ItemController::class);
+
+Route::get('list-document',[DocumentController::class,'index'])->name('list-document');
+Route::get('create-document',[DocumentController::class,'create'])->name('create-document');
+Route::post('store-document',[DocumentController::class,'store'])->name('store-document');
