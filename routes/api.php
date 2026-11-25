@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -22,8 +23,13 @@ Route::delete('massDelete', [ProductController::class, 'massDelete']);
 
 Route::get('mobile-data', function () {
     return response()->json([
-        'title' => 'data from backend',
-        'description' => 'this is my first rest api from react native to backend larabvel',
+        'title' => 'Title from laravel',
+        'description' => 'description from laravel',
         'movies' => [],
     ]);
 });
+
+
+Route::apiResource('employee', EmployeeController::class)
+->middleware('validateRequest');
+;
